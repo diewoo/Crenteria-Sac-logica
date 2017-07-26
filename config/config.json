@@ -1,0 +1,55 @@
+{
+    "mode": "dev",
+    "prod": {
+        "db": {
+            "host": "",
+            "name": "paquetes",
+            "user": "",
+            "pwd": "",
+            "port": "",
+            "pool": ""
+        },
+        "mail": {
+            "smtp": "bancodedatospp@gmail.com",
+            "pwd": "R3masa$1",
+            "send": "mesadeayuda@remasageosys.com.pe",
+            "name": "PerúPetro"
+        },
+        "ftp": "190.8.135.90",
+        "dominio": "registrobd.perupetro.com.pe"
+    },
+    "dev": {
+        "db": {
+            "host": "mysql.us.cloudlogin.co",
+            "name": "pachuco65_web",
+            "user": "pachuco65_web",
+            "pwd": "papu123",
+            "port": "3306",
+            "pool": "5"
+        },
+        "mail": {
+            "smtp": "servicioulimarket@gmail.com",
+            "pwd": "ulimarket2016",
+            "send": "cros410@gmail.com",
+            "name": "Christian"
+        }
+    },
+    "test": {
+        "db": {
+            "host": "192.168.120.165",
+            "name": "paquete",
+            "user": "root",
+            "pwd": "password",
+            "port": "3306",
+            "pool": "5"
+        },
+        "mail": {
+            "smtp": "servicioulimarket@gmail.com",
+            "pwd": "ulimarket2016",
+            "send": "cros410@gmail.com",
+            "name": "Christian"
+        },
+        "ftp": "192.168.120.166",
+        "dominio": "http://192.168.120.165"
+    }
+}

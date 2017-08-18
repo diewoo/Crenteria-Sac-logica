@@ -6,6 +6,8 @@ const contrApi = require("../controllers/api");
 api.route("/getMaquinas")
   .get(contrApi.getMaquinas);
 
+api.route("/sendChange")
+	.post(contrApi.sendChange);
 
 
 module.exports = api;

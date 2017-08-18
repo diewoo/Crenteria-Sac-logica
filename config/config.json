@@ -28,10 +28,10 @@
             "pool": "5"
         },
         "mail": {
-            "smtp": "servicioulimarket@gmail.com",
-            "pwd": "ulimarket2016",
-            "send": "cros410@gmail.com",
-            "name": "Christian"
+            "smtp": "jamaperufood@gmail.com",
+            "pwd": "jamaperuweb",
+            "send": "diegoalonso.renteria@gmail.com",
+            "name": "Diego"
         }
     },
     "test": {

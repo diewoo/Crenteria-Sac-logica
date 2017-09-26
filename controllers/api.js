@@ -26,8 +26,8 @@ function getMaquinas(req, res) {
 
 function sendChange(req, res) {
     var email = req.body.correo;
-    var name = req.body.nombre;
-    var lastname = req.body.lastname;
+    var name = req.body.nombres;
+    var lastname = req.body.apellidos;
     var empresa = req.body.empresa;
     var cargo = req.body.cargo;
     var correo = req.body.correo;

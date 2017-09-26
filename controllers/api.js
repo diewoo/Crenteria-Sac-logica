@@ -23,21 +23,37 @@ function getMaquinas(req, res) {
         });
     });
 }
-function sendChange(req,res){
-    var email=req.body.correo;
-    var name=req.body.nombre;
-    var user={
-        email:email,
-        name:name
 
+function sendChange(req, res) {
+    var email = req.body.correo;
+    var name = req.body.nombre;
+    var lastname = req.body.lastname;
+    var empresa = req.body.empresa;
+    var cargo = req.body.cargo;
+    var correo = req.body.correo;
+    var telefono = req.body.telefono;
+    var pais = req.body.pais;
+    var ruc = req.body.ruc;
+    var mensaje = req.body.mensaje;
+    var user = {
+        email: email,
+        name: name,
+        lastname: lastname,
+        empresa: empresa,
+        cargo: cargo,
+        correo: correo,
+        telefono: telefono,
+        pais: pais,
+        ruc: ruc,
+        mensaje: mensaje
     }
 
-   // user.name="Sr(a)"
-    sendMail.confirm(user,(err,data)=>{
+    // user.name="Sr(a)"
+    sendMail.confirm(user, (err, data) => {
         console.log(data);
         res.status(200).jsonp(data);
     })
-      
+
 };
 
 

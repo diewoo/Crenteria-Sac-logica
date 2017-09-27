@@ -10,11 +10,11 @@ let transporter = nodemailer.createTransport({
     service: 'gmail',
     secure: false,
     port: 25, // sets automatically host, port and connection security settings,
-    auth: { 
-            user:'diegoalonso.renteria@gmail.com',
-            pass:'webcamdelima123'
+    auth: {
+        user: 'diegoalonso.renteria@gmail.com',
+        pass: 'webcamdelima123'
     }
-    
+
 
 });
 
@@ -26,27 +26,25 @@ function confirm(data, done) {
             link: 'http://www.crenteria.com/'
         }
     });
-    
+
     let email = {
         body: {
             greeting: 'Contacto',
             title: 'ALGUIEN TE QUIERE CONTACTAR!!',
-            signature: 'Contacto por la página web',             
-            intro: ['Sus datos son:',' Nombres:'+' '+ data.name
-            ,' Apellidos: '+' '+ data.lastname,'Cargo:'+' '+data.cargo
-             ,' Empresa:'+' '+ data.empresa
-            ,'Correo:'+' '+ data.correo,'telefono:'+' '+data.telefono,
-            'País:'+' '+data.pais,'ruc:'+' '+data.ruc],
-            outro:'Mensaje:'+' '+data.mensaje
+            signature: 'Contacto por la página web',
+            intro: ['Sus datos son:', ' Nombres:' + ' ' + data.name, ' Apellidos: ' + ' ' + data.lastname, 'Cargo:' + ' ' + data.cargo, ' Empresa:' + ' ' + data.empresa, 'Correo:' + ' ' + data.correo, 'telefono:' + ' ' + data.telefono,
+                'País:' + ' ' + data.pais, 'ruc:' + ' ' + data.ruc
+            ],
+            outro: 'Mensaje:' + ' ' + data.mensaje
         }
-        
+
     };
     console.log(email);
     let emailBody = mailGenerator.generate(email);
     var emailText = mailGenerator.generatePlaintext(email);
     let emailOptions = {
         from: '"Crenteria S.A.C" <info@crenteria.com>',
-        to: 'shikichaos@gmail.com',
+        to: 'shikichaos@gmail.com,marcelo@crenteria.com,dgo250594@gmail.com,roberto@crenteria.com',
         subject: "Contacto",
         text: emailText,
         html: emailBody

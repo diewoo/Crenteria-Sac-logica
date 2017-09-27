@@ -7,12 +7,13 @@ const pwd = mail.pwd;
 const dominio = config[mode].link;
 const Mailgen = require('mailgen');
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'webmail.exclusivehosting.net',
+    //service: 'gmail',
     secure: false,
-    port: 25, // sets automatically host, port and connection security settings,
+    port: 587, // sets automatically host, port and connection security settings,
     auth: {
-        user: 'diegoalonso.renteria@gmail.com',
-        pass: 'webcamdelima123'
+        user: 'info@crenteria.com',
+        pass: '1o4ohrE7CJ'
     }
 
 

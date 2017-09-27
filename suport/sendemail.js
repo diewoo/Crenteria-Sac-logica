@@ -7,13 +7,13 @@ const pwd = mail.pwd;
 const dominio = config[mode].link;
 const Mailgen = require('mailgen');
 let transporter = nodemailer.createTransport({
-    host: 'webmail.exclusivehosting.net',
+    host: 'smtp.mail.yahoo.com',
     //service: 'gmail',
     secure: false,
     port: 587, // sets automatically host, port and connection security settings,
     auth: {
-        user: 'info@crenteria.com',
-        pass: '1o4ohrE7CJ'
+        user: 'diegoalonso.renteria@yahoo.com',
+        pass: 'Diego250594'
     }
 
 
@@ -44,7 +44,7 @@ function confirm(data, done) {
     let emailBody = mailGenerator.generate(email);
     var emailText = mailGenerator.generatePlaintext(email);
     let emailOptions = {
-        from: '"Crenteria S.A.C" <info@crenteria.com>',
+        from: '"Crenteria S.A.C" <diegoalonso.renteria@yahoo.com>',
         to: 'shikichaos@gmail.com,marcelo@crenteria.com,dgo250594@gmail.com,roberto@crenteria.com',
         subject: "Contacto",
         text: emailText,

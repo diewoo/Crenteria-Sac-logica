@@ -8,11 +8,12 @@
   "dependencies": {
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
+    "cors": "^2.8.1",
     "express": "~4.15.2",
+    "mailgen": "^2.0.2",
     "morgan": "~1.8.1",
     "mysql": "^2.13.0",
-    "mailgen": "^2.0.2",
     "nodemailer": "^2.7.0",
-    "cors": "^2.8.1"
+    "xoauth2": "^1.2.0"
   }
 }

@@ -7,52 +7,48 @@ const pwd = mail.pwd;
 const dominio = config[mode].link;
 const Mailgen = require('mailgen');
 let transporter = nodemailer.createTransport({
-    service: "Gmail", // sets automatically host, port and connection security settings,
-    auth: {
-        user: "diegoalonso.renteria@gmail.com",
-        pass: "webcamdelima123"
+    service: 'gmail',
+    secure: false,
+    port: 25, // sets automatically host, port and connection security settings,
+    auth: { 
+            user:'diegoalonso.renteria@gmail.com',
+            pass:'webcamdelima123'
     }
+    
+
 });
 
 function confirm(data, done) {
-    let mailGenerator = new Mailgen({
-        theme: 'salted',
+    var mailGenerator = new Mailgen({
+        theme: 'cerberus',
         product: {
             name: 'Crenteria S.A.C',
-            link: 'htpp://crenteria.com/',
-            copyright: '© 2017 Crenteria - Peru'
+            link: 'http://www.crenteria.com/'
         }
     });
-
+    
     let email = {
         body: {
             greeting: 'Contacto',
-            signature: 'Contacto por la web',
-            title: 'ALGUIEN TE QUIERE CONTACTAR',
-            name: data.name,
-            apellido: data.lastname,
-            empresa: data.empresa,
-            cargo: data.cargo,
-            correo: data.correo,
-            telefono: data.telefono,
-            pais: data.pais,
-            ruc: data.pais,
-            email: data.email,
-            mensaje: data.mensaje,
-
-            intro: "Alguien",
-            accion: {
-
-            }
+            title: 'ALGUIEN TE QUIERE CONTACTAR!!',
+            signature: 'Contacto por la página web',             
+            intro: ['Sus datos son:',' Nombres:'+' '+ data.name
+            ,' Apellidos: '+' '+ data.lastname,'Cargo:'+' '+data.cargo
+             ,' Empresa:'+' '+ data.empresa
+            ,'Correo:'+' '+ data.correo,'telefono:'+' '+data.telefono,
+            'País:'+' '+data.pais,'ruc:'+' '+data.ruc],
+            outro:'Mensaje:'+' '+data.mensaje
         }
+        
     };
-
+    console.log(email);
     let emailBody = mailGenerator.generate(email);
+    var emailText = mailGenerator.generatePlaintext(email);
     let emailOptions = {
-        from: '"Crenteria S.A.C" <diegoalonso.renteria@gmail.com>',
+        from: '"Crenteria S.A.C" <info@crenteria.com>',
         to: 'shikichaos@gmail.com',
         subject: "Contacto",
-        text: 'text',
+        text: emailText,
         html: emailBody
     };
     transporter.sendMail(emailOptions, function(error, info) {

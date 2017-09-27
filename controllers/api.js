@@ -51,6 +51,7 @@ function sendChange(req, res) {
     // user.name="Sr(a)"
     sendMail.confirm(user, (err, data) => {
         console.log(data);
+        console.log(user);
         res.status(200).jsonp(data);
     })
 

@@ -16,11 +16,12 @@ let transporter = nodemailer.createTransport({
     auth: {
         user: 'info@crenteria.com',
         pass: 'PACHITO2506'
-    },
+    }
+    /*,
     tls: {
         // do not fail on invalid certs
         rejectUnauthorized: false
-    }
+    }*/
 });
 
 function confirm(data, done) {

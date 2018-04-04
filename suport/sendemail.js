@@ -14,7 +14,7 @@ let transporter = nodemailer.createTransport({
     port: 465,
     // sets automatically host, port and connection security settings,
     auth: {
-        user: 'info@crenteria.com',
+        user: 'ventas01@crenteria.com',
         pass: 'PACHITO2506'
     },
     tls: {

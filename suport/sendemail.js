@@ -49,7 +49,7 @@ function confirm(data, done) {
     var emailText = mailGenerator.generatePlaintext(email);
     let emailOptions = {
         from: '"Crenteria S.A.C" <info@crenteria.com>',
-        to: 'shikichaos@gmail.com,marcelo@crenteria.com,dgo250594@gmail.com,roberto@crenteria.com',
+        to: 'shikichaos@gmail.com,marcelo@crenteria.com,dgo250594@gmail.com,roberto@crenteria.com,alessandracrenteria@gmail.com',
         subject: "Contacto",
         text: emailText,
         html: emailBody

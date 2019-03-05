@@ -14,8 +14,8 @@ let transporter = nodemailer.createTransport({
     port: 465,
     // sets automatically host, port and connection security settings,
     auth: {
-        user: 'ventas01@crenteria.com',
-        pass: 'PACHITO2506'
+        user: 'contactoweb@crenteria.com',
+        pass: 'Contacto123'
     },
     tls: {
         // do not fail on invalid certs
@@ -44,9 +44,18 @@ function confirm(data, done) {
         }
 
     };
-    console.log(email);
+
+    //console.log(email);
     let emailBody = mailGenerator.generate(email);
     var emailText = mailGenerator.generatePlaintext(email);
+    let contacto = {
+        from: '"Crenteria S.A.C" <info@crenteria.com>',
+        to: data.correo,
+        subject: "contacto",
+        text: 'Estimado/a gracias por contactarnos, muy pronto nos pondremos en contacto',
+        html: emailBody
+
+    }
     let emailOptions = {
         from: '"Crenteria S.A.C" <info@crenteria.com>',
         to: 'shikichaos@gmail.com,marcelo@crenteria.com,dgo250594@gmail.com,roberto@crenteria.com,alessandracrenteria@gmail.com',
@@ -54,6 +63,12 @@ function confirm(data, done) {
         text: emailText,
         html: emailBody
     };
+    transporter.sendMail(contacto, function(error) {
+        if (error) {
+            //console.log(error);
+            done(error);
+        }
+    });
     transporter.sendMail(emailOptions, function(error, info) {
         if (error) {
             console.log(error);

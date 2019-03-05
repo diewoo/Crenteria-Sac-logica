@@ -52,8 +52,7 @@ function confirm(data, done) {
         from: '"Crenteria S.A.C" <info@crenteria.com>',
         to: data.correo,
         subject: "contacto",
-        text: 'Estimado/a gracias por contactarnos, muy pronto nos pondremos en contacto',
-        html: emailBody
+        text: 'Estimado/a gracias por contactarnos, muy pronto nos pondremos en contacto'
 
     }
     let emailOptions = {
